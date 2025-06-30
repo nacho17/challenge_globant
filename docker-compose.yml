@@ -6,13 +6,13 @@ services:
     container_name: pg_container
     restart: always
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: migration_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: globant_challenge
+      POSTGRES_DB: headcount
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "6024:5432"
 
   api:
     build: .
